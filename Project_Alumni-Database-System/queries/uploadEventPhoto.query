@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Queries> 
-	<INS_EVENT_PHOTO>
-	 <SQLStatement>INSERT INTO event_photos (file_name, event_photos_description, event_id) VALUES (?,?,?)</SQLStatement>
-	 <QueryType>INSERT</QueryType>
-	 <Description>Create Event Photo </Description>
-	</INS_EVENT_PHOTO>
-</Queries>

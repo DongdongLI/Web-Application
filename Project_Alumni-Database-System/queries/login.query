@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Queries> 
-	<SEL_MEMBER>
-	 <SQLStatement>SELECT member_id,firstname,middlename,lastname,username FROM member M WHERE M.username=? AND M.password=SHA1(?)</SQLStatement>
-	 <QueryType>SELECT</QueryType>
-	 <Description>Select logged in member record</Description>
-	</SEL_MEMBER>	
-</Queries>

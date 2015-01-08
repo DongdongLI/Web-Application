@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Queries>
-	<INS_DONATION>
-	 <SQLStatement>INSERT INTO Member_Event_Donations (event_id, Member_ID,Donation_Amount) values (?,?,?) </SQLStatement>
-	 <QueryType>INSERT</QueryType>
-	 <Description>Insert Donations</Description>
-	</INS_DONATION>		
-</Queries>
