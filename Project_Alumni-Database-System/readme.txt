@@ -1,5 +1,5 @@
 ================================================================================================
-Function
+Functionality
 ================================================================================================
 1.Create and Edit Member Profile both Faculty, Alumni. Editing the profile includes
 2.Enable members to create events and have the information published about them through the system
