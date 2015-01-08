@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queries>
+	<SEL_ALUMNI_LASTNAME>
+	  <SQLStatement>
+select MEMBER.MEMBER_ID, concat_ws(' ',MEMBER.FIRSTNAME,concat_ws(' ', MEMBER.MIDDLENAME, MEMBER.LASTNAME) ) AS NAME,
+MEMBER.CURRENT_STATE 
+FROM MEMBER 
+INNER JOIN ALUMNI 
+ON MEMBER.MEMBER_ID = ALUMNI.MEMBER_ID 
+WHERE MEMBER.LASTNAME LIKE concat(?,'%')
+ORDER BY MEMBER.LASTNAME
+	  </SQLStatement>		
+	  <QueryType>SELECT</QueryType>
+	  <Description>Finds the Alumni whose last name starts with the given pattern. </Description>
+	</SEL_ALUMNI_LASTNAME> 
+	<SEL_ALUMNI_CUR_STATE>
+	  <SQLStatement>
+select MEMBER.MEMBER_ID, concat_ws(' ',MEMBER.FIRSTNAME,concat_ws(' ', MEMBER.MIDDLENAME, MEMBER.LASTNAME) ) AS NAME,
+MEMBER.CURRENT_STATE 
+FROM MEMBER 
+INNER JOIN ALUMNI 
+ON MEMBER.MEMBER_ID = ALUMNI.MEMBER_ID 
+WHERE MEMBER.CURRENT_STATE LIKE concat(?,'%')
+ORDER BY MEMBER.FIRSTNAME
+	  </SQLStatement>		
+	  <QueryType>SELECT</QueryType>
+	  <Description>Finds the Alumni whose current state matches the given pattern. </Description>
+	</SEL_ALUMNI_CUR_STATE>	
+</Queries>

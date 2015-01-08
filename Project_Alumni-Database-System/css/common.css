@@ -1,0 +1,72 @@
+
+@charset "ISO-8859-1";
+hr {
+    color: #BFA739;
+    border: solid;
+    margin: 0px;
+}
+.header {
+    background-color: #006633;
+    padding: 20px;
+}
+.subHeaderContent {
+    margin: 10px auto;
+    padding-left: 10px;
+    width: 800px;
+}
+.content {
+    margin: auto;
+    width: 800px;
+}
+.headerContent {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    width: 800px;
+}
+/* Added to display logout link appropriately */
+.headerContentAlignRight{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right:0px;
+}
+.form-group-overflow {
+  height: 350px;
+  overflow: scroll;
+}
+
+input[type="button"] {
+    float: right;
+    margin-right: 30px;
+}
+.subHeader {
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+	Added to display the lenght of level2 horizontal bars appropriately.
+*/
+.subHeaderContent2 {
+    margin: 20px auto;
+    padding-left: 20px;
+}
+/*
+	Added for displaying user profile pics appropriately. 
+*/
+img{
+}
+.profileview{
+	width:133px;
+	height:100px;
+}
+/*
+	Added for displaying phone icons appropriately. 
+*/
+.phone{
+	width:15px;
+	height:15px;
+}

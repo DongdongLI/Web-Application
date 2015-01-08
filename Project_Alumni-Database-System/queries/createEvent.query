@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queries> 
+	<SEL_EVENT_TYPE>
+	 <SQLStatement>SELECT event_type_id,event_type_desc FROM event_type ET</SQLStatement>
+	 <QueryType>SELECT</QueryType>
+	 <Description>Select Event Types</Description>
+	</SEL_EVENT_TYPE>
+	<SEL_DEPT>
+	 <SQLStatement>SELECT department_id,department_name FROM department D</SQLStatement>
+	 <QueryType>SELECT</QueryType>
+	 <Description>Select Departments</Description>
+	</SEL_DEPT>
+	<INS_EVENT>
+	 <SQLStatement>INSERT INTO events (event_name, event_type_id, event_desc, event_start_date, event_end_date, organizing_dept_id, contact_person_name, contact_person_number, venue) VALUES (?,?,?,?,?,?,?,?,?)</SQLStatement>
+	 <QueryType>INSERT</QueryType>
+	 <Description>Create Event</Description>
+	</INS_EVENT>
+	<UPD_EVENT>
+	 <SQLStatement>UPDATE events SET event_name=?, event_type_id=?, event_desc=?, event_start_date=?, event_end_date=?, organizing_dept_id=?, contact_person_name=?, contact_person_number=?, venue=? WHERE event_id=?</SQLStatement>
+	 <QueryType>UPDATE</QueryType>
+	 <Description>Update Event</Description>
+	</UPD_EVENT>
+	<SEL_EVENT_PHOTOS>
+	 <SQLStatement>SELECT event_photo_id, file_name  FROM event_photos WHERE event_id=?</SQLStatement>
+	 <QueryType>SELECT</QueryType>
+	 <Description>Get event photos</Description>
+	</SEL_EVENT_PHOTOS>
+	<INS_FR_EVENT>
+	 <SQLStatement>INSERT INTO fund_raising_events (event_id, event_owner_id) VALUES (?,?)</SQLStatement>
+	 <QueryType>INSERT</QueryType>
+	 <Description>Create FR fields</Description>
+	</INS_FR_EVENT>
+	<INS_NFR_EVENT>
+	 <SQLStatement>INSERT INTO non_fundraising_events (event_id, event_owner_id, approver_id, approved_flag) VALUES (?,?,?,?)</SQLStatement>
+	 <QueryType>INSERT</QueryType>
+	 <Description>Create NFR fields</Description>
+	</INS_NFR_EVENT>
+	<CHECK_IF_MEMBER_IS_FACULTY>
+	 <SQLStatement>SELECT member_id FROM faculty WHERE member_id=?</SQLStatement>
+	 <QueryType>SELECT</QueryType>
+	 <Description>Get event photos</Description>
+	</CHECK_IF_MEMBER_IS_FACULTY>		
+</Queries>
