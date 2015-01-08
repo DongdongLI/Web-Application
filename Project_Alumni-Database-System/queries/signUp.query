@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queries>
+	<INS_MEMBER>
+		<SQLStatement>INSERT INTO member (firstname,middlename,lastname,username, password) VALUES (?,?,?,?,SHA1(?))</SQLStatement>		
+		<QueryType>INSERT</QueryType>
+		<Description>Member sign up</Description>
+	</INS_MEMBER>
+	<CHECK_USERNAME_ALREADY_EXISTS>
+		<SQLStatement>SELECT M.username FROM member M WHERE M.username=?</SQLStatement>		
+		<QueryType>SELECT</QueryType>
+		<Description>Check if username already exists for a member</Description>
+	</CHECK_USERNAME_ALREADY_EXISTS> 
+	<SEL_MEM_ID>
+		<SQLStatement>SELECT M.username, M.member_id FROM member M WHERE M.username=?</SQLStatement>		
+		<QueryType>SELECT</QueryType>
+		<Description>Select member id for a username</Description>
+	</SEL_MEM_ID>
+	<INS_ALUMNI>
+		<SQLStatement>INSERT INTO alumni (member_id) VALUES (?)</SQLStatement>		
+		<QueryType>INSERT</QueryType>
+		<Description>Insert alumni</Description>
+	</INS_ALUMNI>
+	<INS_FACULTY>
+		<SQLStatement>INSERT INTO faculty (member_id) VALUES (?)</SQLStatement>		
+		<QueryType>INSERT</QueryType>
+		<Description>Insert Faculty</Description>
+	</INS_FACULTY>
+</Queries>

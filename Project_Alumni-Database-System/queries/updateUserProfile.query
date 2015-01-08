@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queries>
+	<UPDATE_PROFILE>
+	  <SQLStatement>
+	  	update member set lastname=?,
+		firstname=?,
+		middlename=?,
+		password=SHA1(?),
+		About_Me=?,
+		Current_Address_H_No=?,
+		Current_Street_Address=?,
+		Current_City=?,
+		Current_State=?,
+		Current_Country=?,
+		Current_Zipcode=?,
+		Perm_Address_H_No=?,
+		Perm_Street_Address=?,
+		Perm_City=?,
+		Perm_State=?,
+		Perm_Country=?,
+		Perm_Zipcode=?,
+		Home_Phone_Current=?,
+		Mobile_Number_Current=?,
+		Facebook_Profile=?,
+		LinkedIN_Profile=?
+		where member_id=?
+	  </SQLStatement>		
+	  <QueryType>UPDATE</QueryType>
+	  <Description>Apply all changes in profile to database </Description>
+	</UPDATE_PROFILE> 
+</Queries>
